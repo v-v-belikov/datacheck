@@ -115,12 +115,13 @@ export const WebEngineerPage = () => {
                       <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Поле</InputLabel>
                         <Select
-                          labelId="demo-simple-select-label"
-                          id="demo-simple-select"
+                          // labelId="demo-simple-select-label"
+                          // id="demo-simple-select"
                           // value={formFields[0]}
                           value={rows[index].formFieldName}
                           label="Поле"
                           onChange={(evt) => {
+                            // consol
                             const updatedRows = update(rows, {
                               [index]: {
                                 formFieldName: {
@@ -133,7 +134,7 @@ export const WebEngineerPage = () => {
                         >
                           {
                             formFields.map(field => (
-                              <MenuItem value={10}>{field}</MenuItem>
+                              <MenuItem value={field}>{field}</MenuItem>
                             ))
                           }
                         </Select>

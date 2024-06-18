@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 const headerNav = [
   {
     role: "inspector",
-    title: "Проверяющий"
+    title: "Оператор"
   },
   {
     role: "general-manager",

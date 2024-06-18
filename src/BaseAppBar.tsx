@@ -29,6 +29,7 @@ const headerNav = [
 
 interface Props {
   onSelectRole: (role: string) => void;
+  // selectedRole: string | null
 }
 
 export const BaseAppBar: React.FC<Props> = ({onSelectRole}) => {
@@ -49,6 +50,7 @@ export const BaseAppBar: React.FC<Props> = ({onSelectRole}) => {
               </Button>
             ))}
           </Box>
+          
           {/* <Button color="inherit">Login</Button> */}
         </Toolbar>
       </AppBar>

@@ -23,6 +23,7 @@ function App() {
       
       <BaseAppBar
         onSelectRole={(role) => setSelectedRole(role)}
+        // selectedRole={selectedRole}
       />
       {selectedRole && (
         <div style={{display: 'flex', flexDirection: "column", width: "100%", alignItems: "center", height: "100%", padding: "15px"}}>

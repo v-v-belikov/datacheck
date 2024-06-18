@@ -12,11 +12,17 @@ interface Props {
     eventName: string;
     forms: Array<{
       formTitle: string;
+      isChecked: boolean;
     }>
-  }>
+  }>;
+  onChangeForm: (rowIndex: number, eventIndex: number, formIndex: number) => void;
+  onChangeEvent: (rowIndex: number, eventIndex: number) => void;
+  rowIndex: number;
 }
 
-export const InspectorForms: React.FC<Props> = ({name, events}) => {
+export const InspectorForms: React.FC<Props> = ({name, events, onChangeForm, rowIndex, onChangeEvent}) => {
+  
+  console.log(events)
   return (
     <div>
       <Accordion style={{marginBottom: "10px"}}>
@@ -30,15 +36,15 @@ export const InspectorForms: React.FC<Props> = ({name, events}) => {
         </AccordionSummary>
         <AccordionDetails>
           {
-            events.map(event => (
-              <div style={{marginBottom: "25px"}}>
+            events.map((event, eventIndex) => (
+              <div style={{marginBottom: "25px"}} key={event.eventName}>
                 <div style={{display: "flex", alignItems: "center", fontWeight: "bold", fontSize: "16px"}}>
-                    <Checkbox/> {event.eventName}
+                    <Checkbox checked={event.forms.some((form) => form.isChecked)} onChange={() => onChangeEvent(rowIndex, eventIndex)}/> {event.eventName}
                 </div>
                 <div style={{display: "flex", flexWrap: "wrap"}}>
-                  {event.forms.map(form => (
-                    <div style={{display: "flex", alignItems: "center"}}>
-                      <Checkbox/> {form.formTitle}
+                  {event.forms.map((form, formIndex) => (
+                    <div style={{display: "flex", alignItems: "center"}} key={form.formTitle}>
+                      <Checkbox checked={form.isChecked} onChange={() => onChangeForm(rowIndex, eventIndex, formIndex)}/> {form.formTitle}
                     </div>
                   ))}
                 </div>

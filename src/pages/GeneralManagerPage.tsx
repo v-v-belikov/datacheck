@@ -1,6 +1,8 @@
+import update from "immutability-helper"
 // import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import { Button } from "@mui/material"
 import { InspectorForms } from "./InspectorForms"
+import { useState } from "react"
 
 
 // const headers = [
@@ -11,36 +13,36 @@ import { InspectorForms } from "./InspectorForms"
 //   "Армия 2024",
 // ]
 
-const rows = [ 
+const initialRows = [ 
 {
     name: "Иван Иванович Петров",
     events: [
       {
         eventName: "Чемпионат России по кёрлингу",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
         ]
       },
       {
         eventName: "Осенняя собачья олимпиада",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
         ]
       },
       {
         eventName: "Форум Россия",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
-          {formTitle: "Форма 5"},
-          {formTitle: "Форма 6"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 5"},
+          {isChecked: false, formTitle: "Форма 6"},
         ]
       },
     ]
@@ -52,29 +54,29 @@ const rows = [
       {
         eventName: "Чемпионат России по кёрлингу",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
         ]
       },
       {
         eventName: "Осенняя собачья олимпиада",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
         ]
       },
       {
         eventName: "Форум Россия",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
-          {formTitle: "Форма 5"},
-          {formTitle: "Форма 6"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 5"},
+          {isChecked: false, formTitle: "Форма 6"},
         ]
       },
     ]
@@ -85,29 +87,29 @@ const rows = [
       {
         eventName: "Чемпионат России по кёрлингу",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
         ]
       },
       {
         eventName: "Осенняя собачья олимпиада",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
         ]
       },
       {
         eventName: "Форум Россия",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
-          {formTitle: "Форма 5"},
-          {formTitle: "Форма 6"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 5"},
+          {isChecked: false, formTitle: "Форма 6"},
         ]
       },
     ]
@@ -118,29 +120,29 @@ const rows = [
       {
         eventName: "Чемпионат России по кёрлингу",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
         ]
       },
       {
         eventName: "Осенняя собачья олимпиада",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
         ]
       },
       {
         eventName: "Форум Россия",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
-          {formTitle: "Форма 5"},
-          {formTitle: "Форма 6"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 5"},
+          {isChecked: false, formTitle: "Форма 6"},
         ]
       },
     ]
@@ -151,29 +153,29 @@ const rows = [
       {
         eventName: "Чемпионат России по кёрлингу",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
         ]
       },
       {
         eventName: "Осенняя собачья олимпиада",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
         ]
       },
       {
         eventName: "Форум Россия",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
-          {formTitle: "Форма 5"},
-          {formTitle: "Форма 6"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 5"},
+          {isChecked: false, formTitle: "Форма 6"},
         ]
       },
     ]
@@ -184,29 +186,29 @@ const rows = [
       {
         eventName: "Чемпионат России по кёрлингу",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
         ]
       },
       {
         eventName: "Осенняя собачья олимпиада",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
         ]
       },
       {
         eventName: "Форум Россия",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
-          {formTitle: "Форма 5"},
-          {formTitle: "Форма 6"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 5"},
+          {isChecked: false, formTitle: "Форма 6"},
         ]
       },
     ]
@@ -217,29 +219,29 @@ const rows = [
       {
         eventName: "Чемпионат России по кёрлингу",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
         ]
       },
       {
         eventName: "Осенняя собачья олимпиада",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
         ]
       },
       {
         eventName: "Форум Россия",
         forms: [
-          {formTitle: "Форма 1"},
-          {formTitle: "Форма 2"},
-          {formTitle: "Форма 3"},
-          {formTitle: "Форма 4"},
-          {formTitle: "Форма 5"},
-          {formTitle: "Форма 6"},
+          {isChecked: false, formTitle: "Форма 1"},
+          {isChecked: false, formTitle: "Форма 2"},
+          {isChecked: false, formTitle: "Форма 3"},
+          {isChecked: false, formTitle: "Форма 4"},
+          {isChecked: false, formTitle: "Форма 5"},
+          {isChecked: false, formTitle: "Форма 6"},
         ]
       },
     ]
@@ -265,13 +267,59 @@ const rows = [
 ]
 
 export const GeneralManagerPage = () => {
+  const [rows, setRows] = useState(initialRows)
+
+  const onChangeForm = (rowIndex: number, eventIndex: number, formIndex: number) => {
+    const updatedRows = update(rows, {
+      [rowIndex]: {
+        events: {
+          [eventIndex]: {
+            forms: {
+              [formIndex]: {
+                isChecked: {
+                  $set: !rows[rowIndex].events[eventIndex].forms[formIndex].isChecked
+                }
+              }
+            }
+          }
+        }
+      }
+    })
+    setRows(updatedRows)
+  }
+
+  const onChangeEvent = (rowIndex: number, eventIndex: number,) => {
+    console.log('onChangeEvent:', rowIndex, eventIndex);
+    const newCheckboxValue = !rows[rowIndex].events[eventIndex].forms[0].isChecked
+    const updatedForms = update(rows[rowIndex].events[eventIndex].forms, {
+      $apply: items => items.map(item => ({ ...item, isChecked: newCheckboxValue }))
+    });
+    console.log('updatedForms:', updatedForms)
+
+    const updatedRows = update(rows, {
+      [rowIndex]: {
+        events: {
+          [eventIndex]: {
+            forms: {
+              $set: updatedForms
+            }
+          }
+        }
+      }
+    })
+    setRows(updatedRows)
+  }
+  
   return (
     <div style={{display: "flex", alignItems: "center", flexDirection: "column", height: "100vh", paddingTop: "50px"}}>
       <div style={{width: "750px"}}>
-        {rows.map(operator => (
+        {rows.map((operator, index) => (
             <InspectorForms
               name={operator.name}
               events={operator.events}
+              onChangeForm={onChangeForm}
+              rowIndex={index}
+              onChangeEvent={onChangeEvent}
             />
         ))}
         <div style={{display: "flex", justifyContent: "flex-end", paddingTop: "20px"}}>

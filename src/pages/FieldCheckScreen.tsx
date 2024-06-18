@@ -1,5 +1,4 @@
 import { Button, TextField } from "@mui/material"
-import passport1 from "../assets/passport1.jpg"
 import { ImageViewer } from "./ImageViewer"
 
 // Паспорт выдан

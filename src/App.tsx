@@ -7,7 +7,7 @@ import { ManagerPage } from './pages/ManagerPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import {BaseAppBar} from './BaseAppBar';
 
-const pageToRole = {
+const pageToRole: {[key: string]: JSX.Element} = {
   inspector: <InspectorPage/>,
   "general-manager": <GeneralManagerPage/>,
   manager: <ManagerPage/>,

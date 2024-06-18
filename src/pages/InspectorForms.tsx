@@ -19,7 +19,7 @@ interface Props {
 export const InspectorForms: React.FC<Props> = ({name, events}) => {
   return (
     <div>
-      <Accordion style={{marginBottom: "5px"}}>
+      <Accordion style={{marginBottom: "10px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"

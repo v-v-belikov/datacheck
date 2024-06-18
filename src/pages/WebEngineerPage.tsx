@@ -92,9 +92,9 @@ const initialRows = [
 export const WebEngineerPage = () => {
   const [rows, setRows] = useState(initialRows)
   return (
-    <div>
+    <div style={{paddingTop: "50px"}}>
       <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table sx={{ minWidth: 750 }} aria-label="simple table">
             <TableHead>
               <TableRow>
                 {headers.map(header => (

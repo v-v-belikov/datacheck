@@ -13,10 +13,10 @@ const headerNav = [
     role: "general-manager",
     title: "Главный менеджер"
   },
-  {
-    role: "projects",
-    title: "Назначение проектов и форм"
-  },
+  // {
+  //   role: "projects",
+  //   title: "Назначение проектов и форм"
+  // },
   {
     role: "manager",
     title: "Менеджер"

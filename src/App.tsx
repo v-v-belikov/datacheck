@@ -12,7 +12,7 @@ const pageToRole: {[key: string]: JSX.Element} = {
   "general-manager": <GeneralManagerPage/>,
   manager: <ManagerPage/>,
   "web-engineer": <WebEngineerPage/>,
-  "projects": <ProjectsPage/>,
+  // "projects": <ProjectsPage/>,
 }
 
 function App() {

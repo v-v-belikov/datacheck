@@ -1,6 +1,5 @@
 import { Button, TextField } from "@mui/material"
 import passport1 from "../assets/passport1.jpg"
-import { useState } from "react"
 import { ImageViewer } from "./ImageViewer"
 
 // Паспорт выдан
@@ -17,22 +16,6 @@ import { ImageViewer } from "./ImageViewer"
 // Дата рождения
 // Место рождения
 // Гражданство
-
-const data = [
-  {
-    image: passport1,
-    fields: [
-      {
-        title: "Фамилия",
-        value: "Пикабушник"
-      },
-      {
-        title: "Имя",
-        value: "Стэнли"
-      }
-    ] 
-  }
-]
 
 interface Props {
   onNextField: () => void;

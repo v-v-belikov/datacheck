@@ -1,6 +1,4 @@
-import { Button, TextField } from "@mui/material"
-import passport1 from "../assets/passport1.jpg"
-import { useState } from "react"
+import { Button} from "@mui/material"
 import { ImageViewer } from "./ImageViewer"
 
 interface Props {

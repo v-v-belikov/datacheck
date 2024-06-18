@@ -1,16 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import { Checkbox } from '@mui/material'
 import { InspectorPage } from './pages/InspectorPage';
 import { GeneralManagerPage } from './pages/GeneralManagerPage';
 import { WebEngineerPage } from './pages/WebEngineerPage';
 import { ManagerPage } from './pages/ManagerPage';
-import { ImageViewer } from './pages/ImageViewer';
-import passport1 from "./assets/passport1.jpg"
-import { ScanCheckPage } from './pages/ScanCheckScreen';
-import { PhotoCheckPage } from './pages/PhotoCheckScreen';
-import { StartPage } from './pages/StartScreen';
-import { SelectPage } from './pages/SelectPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import {BaseAppBar} from './BaseAppBar';
 

@@ -9,10 +9,6 @@ const formFields = [
   // "nameRussia",
 ];
 
-const docFields = [
-
-]
-
 const headers = [
   <Checkbox/>,
   "Поле документа",

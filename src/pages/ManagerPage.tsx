@@ -71,7 +71,7 @@ export const ManagerPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div style={{width: "750px", paddingTop: "30px"}}>
       <h1>Приоритеты проверки анкет по категориям</h1>
       <FormControl style={{minWidth: "300px"}}>
         <InputLabel id="demo-simple-select-label">Проект</InputLabel>

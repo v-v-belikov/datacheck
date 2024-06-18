@@ -63,7 +63,7 @@ export const InspectorPage = () => {
       return;
     }
     // Конец
-    if(selectedFormIndex === forms.length - 1 && selectedFieldIndex === forms[selectedFormIndex].fields.length - 1) {
+    if(selectedFormIndex === forms.length - 1) {
       setCurrentStep("end")
     }
   }

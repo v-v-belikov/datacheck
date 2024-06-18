@@ -1,4 +1,4 @@
-import { Box, Checkbox, FormControl, InputLabel, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Box, Button, Checkbox, FormControl, InputLabel, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import {useState} from 'react';
 import update from 'immutability-helper';
 
@@ -145,6 +145,9 @@ export const WebEngineerPage = () => {
             </TableBody>
           </Table>
         </TableContainer>
+        <div style={{display: "flex", justifyContent: "flex-end", paddingTop: "20px"}}>
+          <Button style={{padding: "10px 20px"}} variant="contained">Сохранить изменения</Button>
+        </div>
       {/* <div style={{
         display: "flex",
         alignItems: "center",

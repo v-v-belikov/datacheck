@@ -32,8 +32,8 @@ export const InspectorForms: React.FC<Props> = ({name, events}) => {
           {
             events.map(event => (
               <div style={{marginBottom: "25px"}}>
-                <div style={{display: "flex", alignItems: "center", fontWeight: "bold", fontSize: "16px", marginLeft: "11px", marginBottom: "15px"}}>
-                  {event.eventName}
+                <div style={{display: "flex", alignItems: "center", fontWeight: "bold", fontSize: "16px"}}>
+                    <Checkbox/> {event.eventName}
                 </div>
                 <div style={{display: "flex", flexWrap: "wrap"}}>
                   {event.forms.map(form => (

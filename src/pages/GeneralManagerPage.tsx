@@ -1,4 +1,5 @@
 // import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
+import { Button } from "@mui/material"
 import { InspectorForms } from "./InspectorForms"
 
 
@@ -265,7 +266,7 @@ const rows = [
 
 export const GeneralManagerPage = () => {
   return (
-    <div style={{display: "flex", justifyContent: "center", height: "100vh", paddingTop: "50px"}}>
+    <div style={{display: "flex", alignItems: "center", flexDirection: "column", height: "100vh", paddingTop: "50px"}}>
       <div style={{width: "750px"}}>
         {rows.map(operator => (
             <InspectorForms
@@ -273,6 +274,9 @@ export const GeneralManagerPage = () => {
               events={operator.events}
             />
         ))}
+        <div style={{display: "flex", justifyContent: "flex-end", paddingTop: "20px"}}>
+          <Button style={{padding: "10px 20px"}} variant="contained">Сохранить изменения</Button>
+        </div>
         {/* <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>

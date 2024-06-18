@@ -13,7 +13,7 @@ import {
   arrayMove,
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
 
 interface Row {
   id: string;
@@ -90,6 +90,9 @@ export const ManagerPage: React.FC = () => {
           </TableContainer>
         </SortableContext>
       </DndContext>
+      <div style={{display: "flex", justifyContent: "flex-end", paddingTop: "20px"}}>
+          <Button style={{padding: "10px 20px"}} variant="contained">Сохранить изменения</Button>
+      </div>
     </div>
   );
 };

@@ -37,7 +37,7 @@ export const BaseAppBar: React.FC<Props> = ({onSelectRole}) => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { md: 'flex' } }}>
             {headerNav.map((page) => (
               <Button
                 key={page.role}

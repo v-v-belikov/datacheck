@@ -92,7 +92,8 @@ const initialRows = [
 export const WebEngineerPage = () => {
   const [rows, setRows] = useState(initialRows)
   return (
-    <div style={{paddingTop: "50px"}}>
+    <div style={{paddingTop: "30px"}}>
+      <h1>Cписок полей кабинета проверки данных</h1>
       <TableContainer component={Paper}>
           <Table sx={{ minWidth: 750 }} aria-label="simple table">
             <TableHead>

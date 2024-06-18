@@ -309,8 +309,9 @@ export const GeneralManagerPage = () => {
   }
   
   return (
-    <div style={{display: "flex", alignItems: "center", flexDirection: "column", height: "100vh", paddingTop: "50px"}}>
+    <div style={{display: "flex", alignItems: "center", flexDirection: "column", height: "100vh", paddingTop: "30px"}}>
       <div style={{width: "750px"}}>
+        <h1>Операторы</h1>
         {rows.map((operator, index) => (
             <InspectorForms
               name={operator.name}

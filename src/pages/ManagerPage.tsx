@@ -13,7 +13,7 @@ import {
   arrayMove,
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 
 interface Row {
   id: string;
@@ -50,6 +50,7 @@ const SortableItem = ({ id, name, index}: { id: string; name: string, index: num
 
 export const ManagerPage: React.FC = () => {
   const [rows, setRows] = useState<Row[]>(initialRows);
+  const [selectValue, setSelectValue] = useState("")
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -70,30 +71,48 @@ export const ManagerPage: React.FC = () => {
   };
 
   return (
-    <div style={{flexBasis: "50%", width: "750px", paddingTop: "30px"}}>
+    <div>
       <h1>Приоритеты проверки анкет по категориям</h1>
-      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-        <SortableContext items={rows} strategy={verticalListSortingStrategy}>
-          <TableContainer component={Paper}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell>№</TableCell>
-                  <TableCell>Группа гостей</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row, index) => (
-                  <SortableItem key={row.id} id={row.id} name={row.name} index={index}/>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </SortableContext>
-      </DndContext>
-      <div style={{display: "flex", justifyContent: "flex-end", paddingTop: "20px"}}>
-          <Button style={{padding: "10px 20px"}} variant="contained">Сохранить изменения</Button>
-      </div>
+      <FormControl style={{minWidth: "300px"}}>
+        <InputLabel id="demo-simple-select-label">Проект</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={selectValue}
+          label="Проект"
+          onChange={(evt) => setSelectValue(evt.target.value)}
+        >
+          <MenuItem value={"Осенняя собачья олимпиада"}>Осенняя собачья олимпиада</MenuItem>
+          <MenuItem value={"Чемпионат России по кёрлингу"}>Чемпионат России по кёрлингу</MenuItem>
+          <MenuItem value={"Форум Россия"}>Форум Россия</MenuItem>
+        </Select>
+      </FormControl>
+      {selectValue && (
+          <div style={{flexBasis: "50%", width: "750px", paddingTop: "30px"}}>
+            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+              <SortableContext items={rows} strategy={verticalListSortingStrategy}>
+                <TableContainer component={Paper}>
+                  <Table>
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>№</TableCell>
+                        <TableCell>Группа гостей</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {rows.map((row, index) => (
+                        <SortableItem key={row.id} id={row.id} name={row.name} index={index}/>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </SortableContext>
+            </DndContext>
+            <div style={{display: "flex", justifyContent: "flex-end", paddingTop: "20px"}}>
+                <Button style={{padding: "10px 20px"}} variant="contained">Сохранить изменения</Button>
+            </div>
+          </div>
+      )}
     </div>
   );
 };

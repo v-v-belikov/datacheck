@@ -1,4 +1,5 @@
 import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
+import { InspectorForms } from "./InspectorForms"
 
 
 const headers = [
@@ -11,53 +12,236 @@ const headers = [
 
 const rows = [ 
 {
-    operator: "Иван Иванович Петров",
-    "Форум Россия": false,
-    "Екат": false,
-    "Олимпиада": false,
-    "Армия 2024": false,
+    name: "Иван Иванович Петров",
+    events: [
+      {
+        eventName: "Чемпионат России по кёрлингу",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+        ]
+      },
+      {
+        eventName: "Осенняя собачья олимпиада",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+        ]
+      },
+      {
+        eventName: "Форум Россия",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+          {formTitle: "Форма 5"},
+          {formTitle: "Форма 6"},
+        ]
+      },
+    ]
+
 },
 {
-    operator: "Алексей Сергеевич Смирнов",
-    "Форум Россия": false,
-    "Екат": false,
-    "Олимпиада": false,
-    "Армия 2024": false,
+    name: "Алексей Сергеевич Смирнов",
+    events: [
+      {
+        eventName: "Чемпионат России по кёрлингу",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+        ]
+      },
+      {
+        eventName: "Осенняя собачья олимпиада",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+        ]
+      },
+      {
+        eventName: "Форум Россия",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+          {formTitle: "Форма 5"},
+          {formTitle: "Форма 6"},
+        ]
+      },
+    ]
 },
 {
-    operator: "Ольга Викторовна Сидорова",
-    "Форум Россия": false,
-    "Екат": false,
-    "Олимпиада": false,
-    "Армия 2024": false,
+    name: "Ольга Викторовна Сидорова",
+    events: [
+      {
+        eventName: "Чемпионат России по кёрлингу",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+        ]
+      },
+      {
+        eventName: "Осенняя собачья олимпиада",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+        ]
+      },
+      {
+        eventName: "Форум Россия",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+          {formTitle: "Форма 5"},
+          {formTitle: "Форма 6"},
+        ]
+      },
+    ]
 },
 {
-    operator: "Мария Александровна Кузнецова",
-    "Форум Россия": false,
-    "Екат": false,
-    "Олимпиада": false,
-    "Армия 2024": false,
+    name: "Мария Александровна Кузнецова",
+    events: [
+      {
+        eventName: "Чемпионат России по кёрлингу",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+        ]
+      },
+      {
+        eventName: "Осенняя собачья олимпиада",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+        ]
+      },
+      {
+        eventName: "Форум Россия",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+          {formTitle: "Форма 5"},
+          {formTitle: "Форма 6"},
+        ]
+      },
+    ]
 },
 {
-    operator: "Дмитрий Владимирович Лебедев",
-    "Форум Россия": false,
-    "Екат": false,
-    "Олимпиада": false,
-    "Армия 2024": false,
+    name: "Дмитрий Владимирович Лебедев",
+    events: [
+      {
+        eventName: "Чемпионат России по кёрлингу",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+        ]
+      },
+      {
+        eventName: "Осенняя собачья олимпиада",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+        ]
+      },
+      {
+        eventName: "Форум Россия",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+          {formTitle: "Форма 5"},
+          {formTitle: "Форма 6"},
+        ]
+      },
+    ]
 },
 {
-    operator: "Екатерина Петровна Морозова",
-    "Форум Россия": false,
-    "Екат": false,
-    "Олимпиада": false,
-    "Армия 2024": false,
+    name: "Екатерина Петровна Морозова",
+    events: [
+      {
+        eventName: "Чемпионат России по кёрлингу",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+        ]
+      },
+      {
+        eventName: "Осенняя собачья олимпиада",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+        ]
+      },
+      {
+        eventName: "Форум Россия",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+          {formTitle: "Форма 5"},
+          {formTitle: "Форма 6"},
+        ]
+      },
+    ]
 },
 {
-    operator: "Сергей Павлович Новиков",
-    "Форум Россия": false,
-    "Екат": false,
-    "Олимпиада": false,
-    "Армия 2024": false,
+    name: "Сергей Павлович Новиков",
+    events: [
+      {
+        eventName: "Чемпионат России по кёрлингу",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+        ]
+      },
+      {
+        eventName: "Осенняя собачья олимпиада",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+        ]
+      },
+      {
+        eventName: "Форум Россия",
+        forms: [
+          {formTitle: "Форма 1"},
+          {formTitle: "Форма 2"},
+          {formTitle: "Форма 3"},
+          {formTitle: "Форма 4"},
+          {formTitle: "Форма 5"},
+          {formTitle: "Форма 6"},
+        ]
+      },
+    ]
 },
 // {
 //     operator: "Анна Борисовна Иванова",
@@ -82,8 +266,14 @@ const rows = [
 export const GeneralManagerPage = () => {
   return (
     <div style={{display: "flex", justifyContent: "center", height: "100vh", paddingTop: "50px"}}>
-      <div>
-        <TableContainer component={Paper}>
+      <div style={{width: "750px"}}>
+        {rows.map(operator => (
+            <InspectorForms
+              name={operator.name}
+              events={operator.events}
+            />
+        ))}
+        {/* <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
@@ -109,7 +299,7 @@ export const GeneralManagerPage = () => {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
+        </TableContainer> */}
       </div>
     </div>
   )

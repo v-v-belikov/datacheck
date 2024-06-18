@@ -71,6 +71,7 @@ export const ManagerPage: React.FC = () => {
 
   return (
     <div style={{flexBasis: "50%", width: "750px", paddingTop: "50px"}}>
+      <h1>Приоритеты</h1>
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <SortableContext items={rows} strategy={verticalListSortingStrategy}>
           <TableContainer component={Paper}>

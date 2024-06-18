@@ -22,7 +22,6 @@ interface Props {
 
 export const InspectorForms: React.FC<Props> = ({name, events, onChangeForm, rowIndex, onChangeEvent}) => {
   
-  console.log(events)
   return (
     <div>
       <Accordion style={{marginBottom: "10px"}}>

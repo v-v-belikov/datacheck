@@ -289,12 +289,10 @@ export const GeneralManagerPage = () => {
   }
 
   const onChangeEvent = (rowIndex: number, eventIndex: number,) => {
-    console.log('onChangeEvent:', rowIndex, eventIndex);
     const newCheckboxValue = !rows[rowIndex].events[eventIndex].forms[0].isChecked
     const updatedForms = update(rows[rowIndex].events[eventIndex].forms, {
       $apply: items => items.map(item => ({ ...item, isChecked: newCheckboxValue }))
     });
-    console.log('updatedForms:', updatedForms)
 
     const updatedRows = update(rows, {
       [rowIndex]: {

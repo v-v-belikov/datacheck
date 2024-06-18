@@ -5,7 +5,10 @@ import { PhotoCheckScreen } from "./PhotoCheckScreen";
 import { FieldCheckScreen } from "./FieldCheckScreen";
 import { StartScreen } from "./StartScreen";
 import passport1 from "../assets/passport1.jpg"
+import passport2 from "../assets/passport2.jpg"
 import photo1 from "../assets/man1.jpg"
+import photo2 from "../assets/woman1.jpg"
+import end from "../assets/end.jpg"
 
 // Массив анкет
 // Оценка скана - Да - следующий шаг / Нет - следующая форма 
@@ -27,7 +30,22 @@ const initialForms = [
       }
     ],
     isBad: false, 
-  }
+  },
+  {
+    scanSrc: passport2,
+    photoSrc: photo2,
+    fields: [
+      {
+        title: "Фамилия",
+        value: "Халабудина"
+      },
+      {
+        title: "Имя",
+        value: "Юлия"
+      }
+    ],
+    isBad: false, 
+  },
 ]
 
 export const InspectorPage = () => {
@@ -45,6 +63,9 @@ export const InspectorPage = () => {
       return;
     }
     // Конец
+    if(selectedFormIndex === forms.length - 1 && selectedFieldIndex === forms[selectedFormIndex].fields.length - 1) {
+      setCurrentStep("end")
+    }
   }
 
   const onNextStep = () => {
@@ -60,6 +81,7 @@ export const InspectorPage = () => {
       setSelectedFieldIndex(index => index + 1);
       return;
     }
+    onNextForm()
   }
 
   const onFieldValueChanged = (value: string) => {
@@ -101,6 +123,12 @@ export const InspectorPage = () => {
         onNextField={onNextField}
         onNextForm={onNextForm}
       />
+    ),
+    "end": (
+      <div style={{padding: "100px", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+        <img width="300" src={end}/>
+        <h1>Всё!</h1>
+      </div>
     ),
   }
   

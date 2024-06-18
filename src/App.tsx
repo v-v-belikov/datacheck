@@ -4,7 +4,6 @@ import { InspectorPage } from './pages/InspectorPage';
 import { GeneralManagerPage } from './pages/GeneralManagerPage';
 import { WebEngineerPage } from './pages/WebEngineerPage';
 import { ManagerPage } from './pages/ManagerPage';
-import { ProjectsPage } from './pages/ProjectsPage';
 import {BaseAppBar} from './BaseAppBar';
 
 const pageToRole: {[key: string]: JSX.Element} = {

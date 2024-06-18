@@ -1,14 +1,14 @@
-import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
+// import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import { InspectorForms } from "./InspectorForms"
 
 
-const headers = [
-  "Оператор",
-  "Форум Россия",
-  "Екат",
-  "Олимпиада",
-  "Армия 2024",
-]
+// const headers = [
+//   "Оператор",
+//   "Форум Россия",
+//   "Екат",
+//   "Олимпиада",
+//   "Армия 2024",
+// ]
 
 const rows = [ 
 {

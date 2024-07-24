@@ -8,18 +8,18 @@ import {IconButton} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const headerNav = [
-    // {
-    //     role: "general-manager",
-    //     title: "Главный менеджер",
-    // },
-    // {
-    //     role: "manager",
-    //     title: "Менеджер",
-    // },
-    // {
-    //     role: "inspector/start-screen",
-    //     title: "Оператор",
-    // },
+    {
+        role: "general-manager/users",
+        title: "Главный менеджер",
+    },
+    {
+        role: "manager",
+        title: "Менеджер",
+    },
+    {
+        role: "inspector/start-screen",
+        title: "Оператор",
+    },
     // {
     //     role: "web-engineer",
     //     title: "Веб-инженер",

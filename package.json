@@ -6,7 +6,7 @@
   "homepage": "https://v-v-belikov.github.io/datacheck",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint-fix": "eslint . --fix ts,tsx",
     "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

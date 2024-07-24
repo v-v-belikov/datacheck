@@ -1,0 +1,15 @@
+.MuiButton-root.error-button {
+  width: 160px;
+  background-color: red;
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 16px;
+
+  &:hover {
+    background-color: red;
+  }
+}
+
+.error-button--icon {
+  margin-top: -2.5px;
+}

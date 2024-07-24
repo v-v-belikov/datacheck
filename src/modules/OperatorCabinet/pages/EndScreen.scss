@@ -1,0 +1,22 @@
+.end-screen {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  text-align: center;
+}
+
+.MuiSvgIcon-root.end-icon {
+  width: 160px;
+  height: 160px;
+}

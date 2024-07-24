@@ -1,0 +1,35 @@
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  height: 100%;
+}
+
+.start-screen__btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.start-screen__btn-text {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.MuiSvgIcon-root.start-screen--icon {
+  width: 200px;
+  height: 200px;
+  color: black;
+}

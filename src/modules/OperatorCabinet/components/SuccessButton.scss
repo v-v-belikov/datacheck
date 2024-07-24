@@ -1,0 +1,15 @@
+.MuiButton-root.success-button {
+  width: 160px;
+  background-color: green;
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 16px;
+
+  &:hover {
+    background-color: green;
+  }
+}
+
+.success-button--icon {
+  margin-top: -1px;
+}

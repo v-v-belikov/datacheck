@@ -1,5 +1,5 @@
 import React, {
-    useEffect, useLayoutEffect, useRef, useState,
+    useEffect, useRef, useState,
 } from "react";
 import {TransformWrapper, TransformComponent, ReactZoomPanPinchRef} from "react-zoom-pan-pinch";
 import Button from "@mui/material/Button";
@@ -9,7 +9,7 @@ import ZoomOutIcon from "@mui/icons-material/ZoomOut";
 import RotateLeftIcon from "@mui/icons-material/RotateLeft";
 import RotateRightIcon from "@mui/icons-material/RotateRight";
 import ZoomInMapIcon from "@mui/icons-material/ZoomInMap";
-import {TextField, Tooltip} from "@mui/material";
+import {Tooltip} from "@mui/material";
 import useResizeObserver from "use-resize-observer";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";

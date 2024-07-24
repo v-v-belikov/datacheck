@@ -3,9 +3,8 @@ import {
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper,
     TextField, IconButton, Box,
 } from "@mui/material";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
-import FilterListIcon from "@mui/icons-material/FilterList";
 
 const SearchWithFilter = () => {
     const handleSearchChange = event => {

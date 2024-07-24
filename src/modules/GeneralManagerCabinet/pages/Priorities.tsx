@@ -16,8 +16,6 @@ import {CSS} from "@dnd-kit/utilities";
 import {
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Select, MenuItem, FormControl, InputLabel,
 } from "@mui/material";
-import {Wrapper} from "../dndkit/components";
-import {SortableTree} from "../dndkit/3 - Examples/Tree/SortableTree";
 
 interface Row {
     id: string;

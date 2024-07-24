@@ -1,6 +1,5 @@
-import React from "react";
 import {
-    Table, TableBody, TableCell, TableContainer, TableHead, TableRow, IconButton, Paper,
+    Table, TableBody, TableCell, TableHead, TableRow, IconButton,
 } from "@mui/material";
 import {Edit as EditIcon, Delete as DeleteIcon} from "@mui/icons-material";
 

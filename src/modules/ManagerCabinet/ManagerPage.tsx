@@ -102,14 +102,14 @@ export const ManagerPage: React.FC = () => {
                             <Table>
                                 <TableHead>
                                     <TableRow>
-                                      <TableCell>№</TableCell>
-                                      <TableCell>Группа гостей</TableCell>
-                                  </TableRow>
+                                        <TableCell>№</TableCell>
+                                        <TableCell>Группа гостей</TableCell>
+                                    </TableRow>
                                 </TableHead>
                                 <TableBody>
                                     {rows.map((row, index) => (
-                                      <SortableItem key={row.id} id={row.id} name={row.name} index={index}/>
-                                  ))}
+                                        <SortableItem key={row.id} id={row.id} name={row.name} index={index}/>
+                                    ))}
                                 </TableBody>
                             </Table>
                         </TableContainer>

@@ -4,7 +4,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // import Button from '@mui/material/Button';
-import {Button, Checkbox} from "@mui/material";
+import {Checkbox} from "@mui/material";
 
 interface Props {
     name: string;

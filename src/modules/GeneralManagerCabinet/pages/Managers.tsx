@@ -1,7 +1,6 @@
 import {useState} from "react";
 import update from "immutability-helper";
 import {Button} from "@mui/material";
-import {InspectorForms} from "../InspectorForms";
 import {ManagerForms} from "../ManagerForms";
 
 const initialRows = [

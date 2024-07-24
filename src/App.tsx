@@ -1,17 +1,14 @@
 import {useState} from "react";
-import InboxIcon from "@mui/icons-material/Inbox";
-import MailIcon from "@mui/icons-material/Mail";
 import "./App.scss";
 import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link,
     NavLink,
 } from "react-router-dom";
 import {Provider} from "react-redux";
 import {
-    Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText,
+    Box, Divider, List, ListItem, ListItemButton, ListItemText,
 } from "@mui/material";
 import {InspectorPage} from "./modules/OperatorCabinet/pages/InspectorPage";
 import {GeneralManagerPage} from "./modules/GeneralManagerCabinet/GeneralManagerPage";
@@ -31,10 +28,10 @@ import {Operators} from "./modules/GeneralManagerCabinet/pages/Operators";
 import {Priorities} from "./modules/GeneralManagerCabinet/pages/Priorities";
 import {FormItem} from "./modules/GeneralManagerCabinet/pages/FormItem";
 import {RussiaForm} from "./modules/GeneralManagerCabinet/pages/RussiaForm";
-import { OlympicForm } from "./modules/GeneralManagerCabinet/pages/OlympicForm";
-import { CurlingForm } from "./modules/GeneralManagerCabinet/pages/CurlingForm";
-import { OperatorsForms } from "./modules/GeneralManagerCabinet/pages/OperatorForms";
-import { Statistics } from "./modules/GeneralManagerCabinet/pages/Statistics";
+import {OlympicForm} from "./modules/GeneralManagerCabinet/pages/OlympicForm";
+import {CurlingForm} from "./modules/GeneralManagerCabinet/pages/CurlingForm";
+import {OperatorsForms} from "./modules/GeneralManagerCabinet/pages/OperatorForms";
+import {Statistics} from "./modules/GeneralManagerCabinet/pages/Statistics";
 
 // const pageToRole: {[key: string]: JSX.Element} = {
 //     inspector: <InspectorPage/>,

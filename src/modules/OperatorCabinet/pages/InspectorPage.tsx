@@ -5,7 +5,6 @@ import {Outlet} from "react-router-dom";
 import {ScanCheckScreen} from "./ScanCheckScreen";
 import {PhotoCheckScreen} from "./PhotoCheckScreen";
 import {FieldCheckScreen} from "./FieldCheckScreen";
-import {StartScreen} from "./StartScreen";
 import passport1 from "../assets/passport1.jpg";
 import passport2 from "../assets/passport2.jpg";
 import passport3 from "../assets/passport-2.jfif";

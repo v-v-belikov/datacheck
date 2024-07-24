@@ -1,15 +1,12 @@
 import update from "immutability-helper";
 // import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import {
-    Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
+    Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
 } from "@mui/material";
 import {useState} from "react";
 import * as React from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import {InspectorForms} from "./InspectorForms";
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 
 // const headers = [
 //   "Оператор",
@@ -521,7 +518,7 @@ export const GeneralManagerPage = () => {
                   </TableBody>
                 </Table>
               </TableContainer> */}
-                        {/* </div>
+            {/* </div>
                     </div>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>

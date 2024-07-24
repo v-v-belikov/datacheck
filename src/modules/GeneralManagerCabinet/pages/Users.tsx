@@ -5,7 +5,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {useState} from "react";
 import {OperatorsTable} from "./OperatorsTable";
 import {NewUserModal} from "./NewUserModal";
-import { ManagersTable } from "./ManagersTable";
+import {ManagersTable} from "./ManagersTable";
 
 // ФИО
 // Логин
